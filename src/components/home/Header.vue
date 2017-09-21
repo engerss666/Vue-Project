@@ -1,6 +1,6 @@
 <template>
-  <div id="home">
-    <el-menu  default-active=1 class="safe-header el-menu-demo" mode="horizontal">
+  <div class="vheader">
+    <el-menu theme="dark" default-active=1 class="el-menu-demo" mode="horizontal">
       <el-menu-item index="1">处理中心</el-menu-item>
       <el-submenu index="2">
         <template slot="title">我的工作台</template>
@@ -17,13 +17,15 @@
 
 <script>
 export default {
-  name: 'home'
+  name: 'vheader'
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less" rel="stylesheet/less" scoped>
-.safe-header{
-  background-color: #3076DA;
-}
+<style lang="less" rel="stylesheet/less">
+  .vheader{
+    position: fixed;
+    top: 0;
+    color:#fff;
+  }
 </style>
+
