@@ -93,3 +93,15 @@ html,body{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.clearfix{
+    display: table;
+}
+.clearfix:before, .clearfix:after{
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+.clearfix{
+    _zoom: 1;
+}

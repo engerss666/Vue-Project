@@ -2,7 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
-
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -71,5 +71,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins:[
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      // favicon:'favicon.ico',
+      inject: true
+    })
+  ]
 }
